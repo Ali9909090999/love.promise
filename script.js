@@ -1,15 +1,27 @@
-// Text animation
-const message = document.querySelector('.message');
-
-message.innerHTML = message.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-
-anime.timeline({ loop: false })
-    .add({
-        targets: '.message .letter',
-        translateY: [100, 0],
-        translateZ: 0,
-        opacity: [0, 1],
-        easing: "easeOutExpo",
-        duration: 1400,
-        delay: (el, i) => 300 + 30 * i
-    });
+particlesJS('particles-js', {
+    particles: {
+        number: {
+            value: 80,
+            density: {
+                enable: true,
+                value_area: 800
+            }
+        },
+        color: {
+            value: '#ffffff'
+        },
+        shape: {
+            type: 'circle',
+            stroke: {
+                width: 0,
+                color: '#000000'
+            },
+            polygon: {
+                nb_sides: 5
+            },
+            image: {
+                src: 'img/github.svg',
+                width: 100,
+                height: 100
+            }
+        },
